@@ -1,0 +1,15 @@
+$font-stack: Helvetica, sans-serif;
+$background-color: #fdf6f0;
+$text-color: #492f10;
+$hilight-color: #fcd8d4;
+
+body {
+  font: 100% $font-stack;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.nav__logo {
+  // width: 20rem;
+  // height: 20rem;
+}
