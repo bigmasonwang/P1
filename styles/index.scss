@@ -9,7 +9,28 @@ body {
   background-color: $background-color;
 }
 
+a {
+  text-decoration: none;
+  color: $text-color;
+  padding: 0.5rem;
+}
+.nav__container {
+  display: flex;
+  flex-direction: row;
+}
 .nav__logo {
-  // width: 20rem;
-  // height: 20rem;
+  width: 15rem;
+  height: 15rem;
+}
+
+.nav__navagation {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav__item {
+  display: flexbox;
+  list-style: none;
+  display: block;
+  padding: 0.5rem 1rem;
 }

@@ -3,31 +3,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
     <title>Grace Zhong</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('.toggle').on('click', function () {
+          if ($('.item').hasClass('active')) {
+            $('.item').removeClass('active');
+          } else {
+            $('.item').addClass('active');
+          }
+        });
+      });
+    </script>
   </head>
   <body>
-    <header>
-      <div>
-        <nav>
-          <div class="nav__container">
-            <a href="#" class="nav__logo">
-              <img src="/img/nav_logo.png" alt="logo" />
-            </a>
-            <div class="nav__navagation">
-              <ul>
-                <li class="nav__item">About</li>
-                <li class="nav__item">Skills</li>
-                <li class="nav__item">Protfolio</li>
-                <li class="nav__item">Contact</li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main>main</main>
-    <footer></footer>
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="#">GraceZhong.dev</a></li>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Service</a></li>
+        <li class="item button"><a href="#">Login</a></li>
+        <li class="item button secondary"><a href="#">Sign Up</a></li>
+        <li class="toggle">
+          <span class="bars"></span>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <a href="#" style="position: fixed; bottom: 0">https://google.com</a>
+    </main>
   </body>
 </html>
