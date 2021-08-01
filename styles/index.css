@@ -23,10 +23,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 .menu li {
   font-size: 16px;
   padding: 15px 5px;
@@ -36,12 +32,58 @@ a:hover {
   display: block;
 }
 
-.logo a {
+.menu__logo a {
   font-size: 20px;
 }
 
-.button.secondary {
-  border-bottom: 1px #444 solid;
+.skills__card__wapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.skills__card {
+  width: 240px;
+  height: 320px;
+  /* padding: 32px; */
+  margin: 16px;
+  background-color: #999;
+}
+
+.social__list,
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 16px 16px 0;
+  font-size: smaller;
+  background-color: aliceblue;
+}
+
+.social__item > a > img {
+  height: 32px;
+  width: 32px;
+}
+
+.skills__item > img {
+  height: 32px;
+  width: 32px;
+  margin-bottom: 2px;
 }
 
 /* Mobile Menu */
@@ -52,26 +94,22 @@ a:hover {
   align-items: center;
 }
 
-.toggle {
+.menu__toggle {
   order: 1;
 }
 
-.item.button {
-  order: 2;
-}
-
-.item {
+.menu__item {
   width: 100%;
   text-align: center;
   order: 3;
   display: none;
 }
 
-.item.active {
+.menu__item.active {
   display: block;
 }
 
-.toggle {
+.menu__toggle {
   cursor: pointer;
 }
 
@@ -100,69 +138,22 @@ a:hover {
   top: -5px;
 }
 
-/* Tablet Menu */
-@media all and (min-width: 468px) {
-  .menu {
-    justify-content: center;
-  }
-  .logo {
-    flex: 1;
-  }
-  .item.button {
-    width: auto;
-    order: 1;
-    display: block;
-  }
-  .toggle {
-    order: 2;
-  }
-  .button.secondary {
-    border: 0;
-  }
-  .button a {
-    text-decoration: none;
-    padding: 7px 15px;
-    background: teal;
-    border: 1px solid #006d6d;
-    border-radius: 50em;
-  }
-  .button.secondary a {
-    background-color: transparent;
-  }
-  .button a:hover {
-    transition: all 0.25s;
-  }
-  .button:not(.secondary) a:hover {
-    background-color: #006d6d;
-    border-color: #005959;
-  }
-  .button.secondary a:hover {
-    color: #ddd;
-  }
-}
-
+/* Desktop Menu */
 @media all and (min-width: 768px) {
-  .item {
+  .menu__item {
     display: block;
     width: auto;
   }
-  .toggle {
+  .menu__toggle {
     display: none;
   }
-  .logo {
+  .menu__logo {
     order: 0;
   }
-  .item {
+  .menu__item {
     order: 1;
   }
-  .button {
-    order: 2;
-  }
-
   .menu li {
     padding: 15px 10px;
-  }
-  .menu li.button {
-    padding-right: 0;
   }
 }
