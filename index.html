@@ -18,26 +18,38 @@
     ></script>
     <script>
       $(function () {
-        $('.menu__toggle').on('click', function () {
-          if ($('.menu__item').hasClass('active')) {
-            $('.menu__item').removeClass('active');
+        $('.nav__toggle').on('click', function () {
+          if ($('.nav__item').hasClass('active')) {
+            $('.nav__item').removeClass('active');
           } else {
-            $('.menu__item').addClass('active');
+            $('.nav__item').addClass('active');
           }
         });
+      });
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 50) {
+          $('nav').addClass('solid');
+        } else {
+          $('nav').removeClass('solid');
+        }
       });
     </script>
   </head>
   <body>
+    <!-- <header>
+      <section>
+        <p class="home__greeting">Hi, There! I'm<br />Grace Zhong</p>
+      </section>
+    </header> -->
     <nav>
-      <ul class="menu">
-        <li class="menu__logo"><a href="#">GraceZhong.dev</a></li>
-        <li class="menu__item"><a href="#home">Home</a></li>
-        <li class="menu__item"><a href="#about">About</a></li>
-        <li class="menu__item"><a href="#skills">Skills</a></li>
-        <li class="menu__item"><a href="#protfolio">Protfolio</a></li>
-        <li class="menu__item"><a href="#contact">Contact</a></li>
-        <li class="menu__toggle">
+      <ul class="nav__container">
+        <li class="nav__logo"><a href="#">GraceZhong.dev</a></li>
+        <li class="nav__item"><a href="#home">Home</a></li>
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#skills">Skills</a></li>
+        <li class="nav__item"><a href="#protfolio">Protfolio</a></li>
+        <li class="nav__item"><a href="#contact">Contact</a></li>
+        <li class="nav__toggle">
           <span class="bars"></span>
         </li>
       </ul>
@@ -72,6 +84,7 @@
           </ul>
         </div>
       </section>
+      <section class="background background__image1">Image1</section>
       <section class="about" id="about">
         <h2>About Me</h2>
         <p>
@@ -223,20 +236,22 @@
         <h2>Get</h2>
         <h3>Get in Touch</h3>
         <div class="contact__card__wrapper">
-          <li class="contact__list">
-            <ul class="contact__item">
-              <img src="/assets/icons/location.svg" alt="location" />
-              <p>address</p>
-            </ul>
-            <ul class="contact__item">
-              <img src="/assets/icons/email.svg" alt="email" />
-              <p>email</p>
-            </ul>
-            <ul class="contact__item">
-              <img src="/assets/icons/phone.svg" alt="phone" />
-              <p>phone</p>
-            </ul>
-          </li>
+          <div class="contact__card">
+            <li class="contact__list">
+              <ul class="contact__item">
+                <img src="/assets/icons/location.svg" alt="location" />
+                <p>Adelaide, SA 5000</p>
+              </ul>
+              <ul class="contact__item">
+                <img src="/assets/icons/email.svg" alt="email" />
+                <p>Grace@Gmail.com</p>
+              </ul>
+              <ul class="contact__item">
+                <img src="/assets/icons/phone.svg" alt="phone" />
+                <p>13888888888</p>
+              </ul>
+            </li>
+          </div>
 
           <div class="contact__form">
             <h3>Contact Form</h3>
