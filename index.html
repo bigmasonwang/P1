@@ -32,18 +32,18 @@
     <nav>
       <ul class="menu">
         <li class="menu__logo"><a href="#">GraceZhong.dev</a></li>
-        <li class="menu__item"><a href="#">Home</a></li>
-        <li class="menu__item"><a href="#">About</a></li>
-        <li class="menu__item"><a href="#">Skills</a></li>
-        <li class="menu__item"><a href="#">Protfolio</a></li>
-        <li class="menu__item"><a href="#">Contact</a></li>
+        <li class="menu__item"><a href="#home">Home</a></li>
+        <li class="menu__item"><a href="#about">About</a></li>
+        <li class="menu__item"><a href="#skills">Skills</a></li>
+        <li class="menu__item"><a href="#protfolio">Protfolio</a></li>
+        <li class="menu__item"><a href="#contact">Contact</a></li>
         <li class="menu__toggle">
           <span class="bars"></span>
         </li>
       </ul>
     </nav>
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <p class="home__greeting">Hi, There! I'm</p>
         <h1>Grace Zhong</h1>
         <p class="home__bio">
@@ -72,7 +72,7 @@
           </ul>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <h2>About Me</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam rem
@@ -81,9 +81,9 @@
           Mollitia.
         </p>
       </section>
-      <section class="skills">
+      <section class="skills" id="skills">
         <h2>Skills</h2>
-        <div class="skills__card__wapper">
+        <div class="skills__card__wrapper">
           <div class="skills__card">
             <ul class="skills__list">
               <li class="skills__item">
@@ -166,8 +166,113 @@
           </div>
         </div>
       </section>
-      <section class="protfolio"></section>
-      <section class="contact"></section>
+      <section class="protfolio" id="protfolio">
+        <h2>Protfolio</h2>
+        <div class="protfolio__card__wrapper">
+          <div class="protfolio__card">
+            <div class="protfolio__image"></div>
+            <div class="protfolio__description">
+              <h3>Project title</h3>
+              <h4>used skills</h4>
+              <ul>
+                <li>detials1</li>
+                <li>detials2</li>
+                <li>detials3</li>
+              </ul>
+              <div class="protfolio__links">
+                <a href="#">Live</a>
+                <a href="#">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="protfolio__card">
+            <div class="protfolio__image"></div>
+            <div class="protfolio__description">
+              <h3>Project title</h3>
+              <h4>used skills</h4>
+              <ul>
+                <li>detials1</li>
+                <li>detials2</li>
+                <li>detials3</li>
+              </ul>
+              <div class="protfolio__links">
+                <a href="#">Live</a>
+                <a href="#">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="protfolio__card">
+            <div class="protfolio__image"></div>
+            <div class="protfolio__description">
+              <h3>Project title</h3>
+              <h4>used skills</h4>
+              <ul>
+                <li>detials1</li>
+                <li>detials2</li>
+                <li>detials3</li>
+              </ul>
+              <div class="protfolio__links">
+                <a href="#">Live</a>
+                <a href="#">Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Get</h2>
+        <h3>Get in Touch</h3>
+        <div class="contact__card__wrapper">
+          <li class="contact__list">
+            <ul class="contact__item">
+              <img src="/assets/icons/location.svg" alt="location" />
+              <p>address</p>
+            </ul>
+            <ul class="contact__item">
+              <img src="/assets/icons/email.svg" alt="email" />
+              <p>email</p>
+            </ul>
+            <ul class="contact__item">
+              <img src="/assets/icons/phone.svg" alt="phone" />
+              <p>phone</p>
+            </ul>
+          </li>
+
+          <div class="contact__form">
+            <h3>Contact Form</h3>
+            <form action="">
+              <label for="nameInput"></label>
+              <input
+                type="text"
+                name="nameInput"
+                id=""
+                required
+                placeholder="Your Name*"
+              />
+              <label for="emailInput"></label>
+              <input
+                type="email"
+                name="emailInput"
+                id=""
+                required
+                placeholder="Your Email*"
+              />
+              <label for="messageInput"></label>
+              <textarea
+                name="messageInput"
+                id="messageInput"
+                cols="30"
+                rows="10"
+                required
+                placeholder="Your Message*"
+              ></textarea>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>Grace Zhong 2021</p>
+    </footer>
   </body>
 </html>
