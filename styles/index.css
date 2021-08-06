@@ -1,6 +1,7 @@
 /* Background Colors */
 /* Colors */
 /* Fonts */
+/* Images */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -25,7 +26,7 @@ ul {
 
 /* navgation */
 nav {
-  background-color: #f4b9ba;
+  background-color: #334257;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -48,7 +49,7 @@ nav .nav__container .nav__logo {
 }
 
 nav.solid {
-  background-color: #f4b9ba;
+  background-color: #334257;
 }
 
 /* Mobile nav */
@@ -115,34 +116,18 @@ nav.solid {
   top: -5px;
 }
 
-/* Desktop Menu */
-@media all and (min-width: 768px) {
-  .nav__item {
-    display: block;
-    width: auto;
-  }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__logo {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .nav__item {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .nav__container li {
-    padding: 15px 10px;
-  }
+/* mobile main */
+main section {
+  padding: 80px 16px;
 }
 
-/* main */
-.contact__card__wrapper,
-.protfolio__card__wrapper,
-.skills__card__wrapper {
+main section h2 {
+  padding: 32px;
+}
+
+main .about__card__wrapper, main .contact__card__wrapper,
+main .protfolio__card__wrapper,
+main .skills__card__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,7 +145,12 @@ nav.solid {
   max-width: 1100px;
   border-radius: 32px;
   margin: 0 auto;
-  background-color: white;
+  background-color: #f7f7f7;
+}
+
+main .about__card__wrapper p {
+  padding: 16px;
+  font-size: 19.2px;
 }
 
 .contact__card,
@@ -170,7 +160,7 @@ nav.solid {
   width: 240px;
   height: 320px;
   margin: 16px;
-  background-color: FAE3D9;
+  background-color: #ded8d8;
 }
 
 .contact__form {
@@ -178,7 +168,7 @@ nav.solid {
   width: 320px;
   height: 320px;
   margin: 16px;
-  background-color: FAE3D9;
+  background-color: #ded8d8;
 }
 
 .contact__list,
@@ -198,6 +188,13 @@ nav.solid {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.contact__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact__item,
@@ -237,11 +234,46 @@ nav.solid {
 footer {
   margin-top: 32px;
   padding: 16px;
-  background-color: white;
+  background-color: #334257;
 }
 
 footer p {
   text-align: center;
+  color: #eeeeee;
+}
+
+/* Desktop nav */
+@media all and (min-width: 768px) {
+  .nav__item {
+    display: block;
+    width: auto;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__logo {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .nav__item {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .nav__container li {
+    padding: 15px 10px;
+  }
+  main section {
+    padding: 80px 32px;
+  }
+  main .about__card__wrapper {
+    background-color: white;
+  }
+  main .about__card__wrapper p {
+    padding: 48px;
+    font-size: 24px;
+  }
 }
 
 /* background images*/
@@ -259,7 +291,7 @@ footer p {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 100vh;
-  background-image: url("../assets/background_image1.jpg");
+  background-image: url("../assets/background_image4.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -276,6 +308,7 @@ footer p {
   margin: 0 auto;
   color: #eeeeee;
   margin-bottom: 32px;
+  padding: 0 32px;
   font-size: 24px;
   max-width: 765;
 }

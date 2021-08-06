@@ -1,16 +1,23 @@
 /* Background Colors */
 $background: rgb(247, 247, 247);
 $background-wraper: rgb(255, 255, 255);
-$background-card: FAE3D9;
+$background-card: rgb(222, 216, 216);
 /* Colors */
 $text-color: #222;
 $border-color: rgb(238, 238, 238);
 $text-color-header: rgb(255, 255, 255);
-$primary-color: rgb(244, 185, 186);
+
+// $primary-color: rgb(215, 217, 223);
+$primary-color: #334257;
+$secondary-color: #476072;
+$secondary-color: #eeeeee;
 
 /* Fonts */
 $font-size-base: 16px;
 $font-stack: Helvetica, sans-serif;
+
+/* Images */
+$home-image: '../assets/background_image4.jpg';
 
 * {
   box-sizing: border-box;
@@ -122,43 +129,39 @@ nav.solid {
   top: -5px;
 }
 
-/* Desktop Menu */
-@media all and (min-width: 768px) {
-  .nav__item {
-    display: block;
-    width: auto;
-  }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__logo {
-    order: 0;
-  }
-  .nav__item {
-    order: 1;
-  }
-  .nav__container li {
-    padding: 15px 10px;
-  }
-}
-
-/* main */
+/* mobile main */
 
 main {
-  // padding: 16px 32px;
+  section {
+    padding: 80px 16px;
+    h2 {
+      padding: 32px;
+    }
+  }
+  %card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    border-radius: 32px;
+    margin: 0 auto;
+    background-color: $background;
+  }
+  .about__card__wrapper {
+    @extend %card-wrapper;
+    p {
+      padding: 16px;
+      font-size: $font-size-base * 1.2;
+    }
+  }
 }
+
 .contact__card__wrapper,
 .protfolio__card__wrapper,
 .skills__card__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  border-radius: 32px;
-  margin: 0 auto;
-  background-color: $background-wraper;
+  @extend %card-wrapper;
 }
 
 .contact__card,
@@ -187,6 +190,10 @@ main {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+}
+
+.contact__list {
+  flex-direction: column;
 }
 
 .contact__item,
@@ -226,14 +233,46 @@ main {
 footer {
   margin-top: 32px;
   padding: 16px;
-  background-color: $background-wraper;
+  background-color: $primary-color;
   p {
     text-align: center;
+    color: $secondary-color;
   }
 }
 
+/* Desktop nav */
+@media all and (min-width: 768px) {
+  .nav__item {
+    display: block;
+    width: auto;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__logo {
+    order: 0;
+  }
+  .nav__item {
+    order: 1;
+  }
+  .nav__container li {
+    padding: 15px 10px;
+  }
+
+  main {
+    section {
+      padding: 80px 32px;
+    }
+    .about__card__wrapper {
+      background-color: $background-wraper;
+      p {
+        padding: 48px;
+        font-size: $font-size-base * 1.5;
+      }
+    }
+  }
+}
 /* background images*/
-$img1: '../assets/background_image1.jpg';
 
 .home {
   display: flex;
@@ -242,7 +281,7 @@ $img1: '../assets/background_image1.jpg';
   align-content: center;
 
   height: 100vh;
-  background-image: url($img1);
+  background-image: url($home-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -259,6 +298,7 @@ $img1: '../assets/background_image1.jpg';
     margin: 0 auto;
     color: $border-color;
     margin-bottom: 32px;
+    padding: 0 32px;
     font-size: $font-size-base * 1.5;
     max-width: 765;
   }

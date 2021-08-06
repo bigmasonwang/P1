@@ -25,36 +25,23 @@
             $('.nav__item').addClass('active');
           }
         });
-      });
-      $(window).scroll(function () {
-        if ($(window).scrollTop() >= 50) {
-          $('nav').addClass('solid');
-        } else {
-          $('nav').removeClass('solid');
-        }
+
+        $('.nav__item').on('click', function () {
+          $('.nav__item').removeClass('active');
+        });
+
+        $(window).scroll(function () {
+          if ($(window).scrollTop() >= 50) {
+            $('nav').addClass('solid');
+          } else {
+            $('nav').removeClass('solid');
+          }
+        });
       });
     </script>
   </head>
   <body>
-    <!-- <header>
-      <section>
-        <p class="home__greeting">Hi, There! I'm<br />Grace Zhong</p>
-      </section>
-    </header> -->
-    <nav>
-      <ul class="nav__container">
-        <li class="nav__logo"><a href="#">GraceZhong.dev</a></li>
-        <li class="nav__item"><a href="#home">Home</a></li>
-        <li class="nav__item"><a href="#about">About</a></li>
-        <li class="nav__item"><a href="#skills">Skills</a></li>
-        <li class="nav__item"><a href="#protfolio">Protfolio</a></li>
-        <li class="nav__item"><a href="#contact">Contact</a></li>
-        <li class="nav__toggle">
-          <span class="bars"></span>
-        </li>
-      </ul>
-    </nav>
-    <main>
+    <header>
       <section class="home" id="home">
         <p class="home__greeting">Hi, There! I'm</p>
         <h1>Grace Zhong</h1>
@@ -64,35 +51,56 @@
           obcaecati quaerat, eligendi minus ad debitis blanditiis rerum
           voluptate, totam impedit.
         </p>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" rel="">
-                <img src="/assets/icons/linkedin.svg" alt="" />
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" rel="">
-                <img src="/assets/icons/github.svg" alt="" />
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" rel="">
-                <img src="/assets/icons/wechat.svg" alt="" />
-              </a>
-            </li>
-          </ul>
-        </div>
       </section>
-      <section class="background background__image1">Image1</section>
+    </header>
+
+    <main>
+      <nav>
+        <ul class="nav__container">
+          <li class="nav__logo"><a href="#">GraceZhong.dev</a></li>
+          <li class="nav__item"><a href="#home">Home</a></li>
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#skills">Skills</a></li>
+          <li class="nav__item"><a href="#protfolio">Protfolio</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+          <li class="nav__toggle">
+            <span class="bars"></span>
+          </li>
+        </ul>
+      </nav>
       <section class="about" id="about">
         <h2>About Me</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam rem
-          numquam obcaecati laudantium, illum illo vel est optio, natus ipsum
-          vero expedita similique recusandae ex provident eveniet esse sapiente!
-          Mollitia.
-        </p>
+        <div class="about__card__wrapper">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam rem
+            numquam obcaecati laudantium, illum illo vel est optio, natus ipsum
+            vero expedita similique recusandae ex provident eveniet esse
+            sapiente! Mollitia. <br />Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Voluptatibus molestiae aliquid explicabo
+            repellendus alias suscipit obcaecati odio expedita accusantium
+            cupiditate rerum perferendis ratione hic voluptate, quidem nulla id
+            quo blanditiis.
+          </p>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" rel="">
+                  <img src="/assets/icons/linkedin.svg" alt="" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" rel="">
+                  <img src="/assets/icons/github.svg" alt="" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" rel="">
+                  <img src="/assets/icons/wechat.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="skills" id="skills">
         <h2>Skills</h2>
@@ -233,8 +241,7 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h2>Get</h2>
-        <h3>Get in Touch</h3>
+        <h2>Get in Touch</h2>
         <div class="contact__card__wrapper">
           <div class="contact__card">
             <li class="contact__list">
